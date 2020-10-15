@@ -28,7 +28,7 @@ class DemoTest {
     }
 
     @Test
-    void should_return_0_locationX_0_locationY_W_heading_when_command_given_is_R() {
+    void should_return_0_locationX_0_locationY_E_heading_when_command_given_is_R() {
         MarsRover marsRover = new MarsRover(0, 0, "N");
 
         marsRover.executeCommand("R");
