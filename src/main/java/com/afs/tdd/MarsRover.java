@@ -15,14 +15,25 @@ public class MarsRover {
 
     public void executeCommand(String commands) {
         Arrays.stream(commands.split(""))
-                .forEach(this::move);
+                .forEach(command -> {
+                    move(command);
+                    turn(command);
+                });
     }
 
     private void move(String command) {
         if (command.equals("M")) {
-             if (direction.equals("N")){
-                 locationY++;
-             }
+            if (direction.equals("N")) {
+                locationY++;
+            }
+        }
+    }
+
+    private void turn(String command) {
+        if (command.equals("L")) {
+            if (direction.equals("N")) {
+                direction = "W";
+            }
         }
     }
 
