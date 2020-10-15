@@ -145,4 +145,15 @@ class DemoTest {
             marsRover.checkValidCommand("F");
         });
     }
+
+    @Test
+    void should_return_negative1_locationX_1_locationY_N_heading_when_command_given_is_MLMR() {
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+
+        marsRover.executeCommand("MLMR");
+
+        assertEquals(-1, marsRover.getLocationX());
+        assertEquals(1, marsRover.getLocationY());
+        assertEquals("N", marsRover.getDirection());
+    }
 }
