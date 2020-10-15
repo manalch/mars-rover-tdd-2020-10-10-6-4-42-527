@@ -16,9 +16,20 @@ public class MarsRover {
     public void executeCommand(String commands) {
         Arrays.stream(commands.split(""))
                 .forEach(command -> {
-                    move(command);
-                    turn(command);
+                    try {
+                        checkValidCommand(command);
+                        move(command);
+                        turn(command);
+                    } catch (CommandNotDefinedException e) {
+                        e.printStackTrace();
+                    }
                 });
+    }
+
+    public void checkValidCommand(String command) throws CommandNotDefinedException {
+        if (!Arrays.asList("M", "L", "R").contains(command)) {
+            throw new CommandNotDefinedException("Command " + command + " Not Defined");
+        }
     }
 
     private void move(String command) {
