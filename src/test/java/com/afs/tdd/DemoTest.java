@@ -103,4 +103,15 @@ class DemoTest {
         assertEquals(0, marsRover.getLocationY());
         assertEquals("S", marsRover.getDirection());
     }
+
+    @Test
+    void should_return_negative1_locationX_0_locationY_W_heading_when_command_given_is_M() {
+        MarsRover marsRover = new MarsRover(0, 0, "W");
+
+        marsRover.executeCommand("M");
+
+        assertEquals(-1, marsRover.getLocationX());
+        assertEquals(0, marsRover.getLocationY());
+        assertEquals("W", marsRover.getDirection());
+    }
 }
