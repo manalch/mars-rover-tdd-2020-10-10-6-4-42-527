@@ -32,6 +32,9 @@ public class MarsRover {
             if (direction.equals("E")) {
                 locationX++;
             }
+            if (direction.equals("W")) {
+                locationX--;
+            }
         }
     }
 
