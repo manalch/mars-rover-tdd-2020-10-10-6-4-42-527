@@ -35,6 +35,11 @@ public class MarsRover {
                 direction = "W";
             }
         }
+        if (command.equals("R")) {
+            if (direction.equals("N")) {
+                direction = "E";
+            }
+        }
     }
 
     public int getLocationX() {
