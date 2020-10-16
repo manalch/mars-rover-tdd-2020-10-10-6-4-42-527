@@ -17,7 +17,7 @@ public class MarsRover {
     private static final String TURN_RIGHT_COMMAND = "R";
     private static final String EMPTY_STRING = "";
     private static final String MOVE_COMMAND = "M";
-    private static final Map<String, String> LEFT_TURN_MAP = new HashMap<>();
+    private static final HashMap<String, String> LEFT_TURN_MAP = new HashMap<>();
     private static final HashMap<String, String> RIGHT_TURN_MAP = new HashMap<>();
     private static final List<String> COMMAND_LIST = Arrays.asList(MOVE_COMMAND, TURN_LEFT_COMMAND, TURN_RIGHT_COMMAND);
 
